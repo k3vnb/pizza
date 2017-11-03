@@ -19,12 +19,12 @@ _ _
 * _It can allow user to select a single pizza size_
   * _Example Input: large_
   * _Example Output: display("large pizza")_
-* _It can allower user to select multiple "cheap" toppings_
+* _It can allow user to select multiple "cheap" toppings_
   * _Example Input: select: Pepperoni; select: Sausage_
-  * _Example Output: display("Pepperoni" + "Sausage")_
-* _It can _
-  * _Example Input: _
-  * _Example Output: _
+  * _Example Output: display("Pepperoni" + "Sausage") & add $1.50 per topping to price_
+* _It can allow user to select multiple "expensive" toppings_
+  * _Example Input: select: Portobella Mushrooms_
+  * _Example Output: display("Portabella Mushrooms" & add $2.50 per topping to price_
 * _It can _
   * _Example Input: _
   * _Example Output: _

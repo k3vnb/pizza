@@ -14,15 +14,18 @@
         <h1>Pizzarggh</h1>
       </div>
       <form id="pizzaform">
-        <div>
-          <label class="size-query">Select Size</label>
+        <div class="size-query">
+          <label>Select Size</label>
           <select id="size-select" name="size-pizza">
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
           </select>
           <br>
-          <!-- <button type="submit" id="size-add" name="button" class="btn btn-primary">Select</button> -->
+          <button id="size-add" name="button" class="btn btn-primary">Select</button>
+        </div>
+        <div>
+          <p>Your size selection: <span id="show-size"></span></p>
         </div>
         <hr>
       <div class="toppings" id="tier-one-toppings">
@@ -44,7 +47,7 @@
           <input type="checkbox" name="expensive-topping" value="Ricotta">Fresh Ricotta<br>
           <!-- <button type="submit" id="expensive-topping-add" name="button" class="btn btn-info">Add</button> -->
       </div>
-      <button type="submit" id="submit-form" name="button" class="btn btn-success">Submit</button>
+      <button type="submit" id="submit-form" name="button" class="btn btn-success toppings">Submit</button>
 
     </form>
      </div> <!--end of container -->

@@ -25,10 +25,15 @@ Pizza.prototype.pizzaPrice = function() {
 
 //end of Business Logic
 $(document).ready(function() {
-  $("#pizzaform").submit(function (event){
+  $("#size-add").click(function (event) {
+    $(".toppings").show();
+    $(".size-query").hide();
+    var pizzaSize = $("select#size-select").val();
+    $("#show-size").append(pizzaSize);
+  });
+  $("form#pizzaform").submit(function (event){
     event.preventDefault();
   var pizzaSize = $("select#size-select").val();
-    // $(".toppings").show();
 
   var cheapToppings = [];
     $("input:checkbox[name=cheap-topping]:checked").each(function() {
