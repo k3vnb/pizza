@@ -1,3 +1,4 @@
+//business logic begins
 
 function Pizza(size, cheapToppings, expensiveToppings) {
   this.size = size;
@@ -6,20 +7,19 @@ function Pizza(size, cheapToppings, expensiveToppings) {
 };
 
 Pizza.prototype.pizzaPrice = function() {
-  var pizzaPrice = 10
+  var pizzaPrice = 10;
   if (this.size == "small") {
     pizzaPrice = pizzaPrice - 1;
   } else if (this.size == "large") {
     pizzaPrice = pizzaPrice + 2;
   }
   if (this.cheapToppings.length >= 1) {
-    pizzaPrice = pizzaPrice + (this.cheapToppings.length * 1.5)
+    pizzaPrice = pizzaPrice + (this.cheapToppings.length * 2)
   }
   if (this.expensiveToppings.length >= 1) {
-    pizzaPrice = pizzaPrice + (this.expensiveToppings.length * 2.5)
+    pizzaPrice = pizzaPrice + (this.expensiveToppings.length * 4)
   } return pizzaPrice;
-
-}
+};
 
 
 
@@ -32,29 +32,29 @@ $(document).ready(function() {
     $(".your-size").show();
     $("#show-size").append(pizzaSize);
   });
-  $("form#pizzaform").submit(function (event){
-    event.preventDefault();
-    $("#your-order").empty();
-    $(".display-result").show();
-  var pizzaSize = $("select#size-select").val();
+    $("form#pizzaform").submit(function (event){
+      event.preventDefault();
+      $("#your-order").empty();
+      $(".display-result").show();
+      var pizzaSize = $("select#size-select").val();
 
-  var cheapToppings = [];
-    $("input:checkbox[name=cheap-topping]:checked").each(function() {
-    var allCheapToppings = $(this).val();
-    cheapToppings.push(allCheapToppings);
-  });//end of 'add'' cheap toppings select
+      var cheapToppings = [];
+        $("input:checkbox[name=cheap-topping]:checked").each(function() {
+        var allCheapToppings = $(this).val();
+        cheapToppings.push(allCheapToppings);
+      });//end of 'add'' cheap toppings select
         console.log(cheapToppings);
 
       var expensiveToppings = [];
       $("input:checkbox[name=expensive-topping]:checked").each(function() {
       var allExpensiveToppings = $(this).val();
       expensiveToppings.push(allExpensiveToppings);
-  });//end of 'add' exp toppings select
-      console.log(expensiveToppings);
+      });//end of 'add' exp toppings select
+        console.log(expensiveToppings);
 
-var yourPizza = new Pizza(pizzaSize, cheapToppings, expensiveToppings);
-$("#your-order").append("$" + yourPizza.pizzaPrice());
-console.log(yourPizza.pizzaPrice());
+      var yourPizza = new Pizza(pizzaSize, cheapToppings, expensiveToppings);
 
+      $("#your-order").append("$" + yourPizza.pizzaPrice() + ".00");
+      console.log(yourPizza.pizzaPrice());
   }); //end of submit
 });//end of doc ready

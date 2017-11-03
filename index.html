@@ -22,13 +22,13 @@
             <option value="large">Large</option>
           </select>
           <br>
-          <button id="size-add" name="button" class="btn btn-primary">Select</button>
+          <button id="size-add" name="button" class="btn btn-primary">Select Size</button>
         </div>
         <div class="your-size">
           <p>Your size selection: <span id="show-size"></span></p>
         </div>
         <hr>
-      <div class="toppings" id="tier-one-toppings">
+        <div class="toppings" id="tier-one-toppings">
           <h2>Select Basic Toppings</h2>
           <input type="checkbox" name="cheap-topping" value="Pepperoni">Pepperoni<br>
           <input type="checkbox" name="cheap-topping" value="Onions">Onions<br>
@@ -40,7 +40,6 @@
           </select>
           <input type="checkbox" name="cheap-topping" value="Basil">Basil<br>
           <input type="checkbox" name="cheap-topping" value="Feta">Feta Cheese<br>
-          <!-- <button type="submit" id="cheap-topping-add">Add</button> -->
         </div>
         <div class="toppings" id="tier-two-toppings"
           <hr>
@@ -50,14 +49,19 @@
           </select>
           <input type="checkbox" name="expensive-topping" value="Smoked Ham">Smoked Ham<br>
           <input type="checkbox" name="expensive-topping" value="Ricotta">Fresh Ricotta<br>
-          <!-- <button type="submit" id="expensive-topping-add" name="button" class="btn btn-info">Add</button> -->
+        </div>
+        <div>
+          <button type="submit" id="submit-form" class="btn btn-success toppings">Add Toppings</button>
+        </div>
+      </form>
+      <div class="display-result card">
+        <div class="card-header">
+          Your Total Price:
+        </div>
+        <div class="card-body">
+          <p><span id="your-order"></span>
+        </div>
       </div>
-      <button type="submit" id="submit-form" name="button" class="btn btn-success toppings">Submit</button>
-
-    </form>
-    <div class="display-result card">
-      <p><span id="your-order"></span>
-    </div>
-     </div> <!--end of container -->
+    </div> <!--end of container -->
   </body>
 </html>
