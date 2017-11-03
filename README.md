@@ -21,7 +21,7 @@ _ _
   * _Example Output: display("large pizza")_
 * _It can allower user to select multiple "cheap" toppings_
   * _Example Input: select: Pepperoni; select: Sausage_
-  * _Example Output: display("Pepperoni" + "Sausage"_
+  * _Example Output: display("Pepperoni" + "Sausage")_
 * _It can _
   * _Example Input: _
   * _Example Output: _

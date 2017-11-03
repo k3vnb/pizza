@@ -21,21 +21,27 @@
           <option value="large">Large</option>
         </select>
         <br>
-        <button type="submit" id="size-add" name="button" class="btn btn-info">Enter</button>
+        <button type="submit" id="size-add" name="button" class="btn btn-primary">Select</button>
+      </form>
         <hr>
-        <h2>Select Basic Toppings</h2>
-        <input type="checkbox" name="cheap-topping" value="cheap">Pepperoni<br>
-        <input type="checkbox" name="cheap-topping" value="cheap">Onions<br>
-        </select>
-        <input type="checkbox" name="cheap-topping" value="cheap">Sausage<br>
-        <input type="checkbox" name="cheap-topping" value="cheap">Tomatoes<hr>
-        <h2>Select Specialty Toppings</h2>
-        <input type="checkbox" name="cheap-topping" value="expensive">Portobella Mushrooms<br>
-        <input type="checkbox" name="cheap-topping" value="expensive">Calamata Olives<br>
-        </select>
-        <input type="checkbox" name="cheap-topping" value="expensive">Caspian Caviar<br>
-        <input type="checkbox" name="cheap-topping" value="expensive">Fresh Ricotta<br>
-        <button type="submit" id="topping-add" name="button" class="btn btn-info">Add</button>
+      <form class="toppings" id="tier-one-toppings">
+          <h2>Select Basic Toppings</h2>
+          <input type="checkbox" name="cheap-topping" value="Pepperoni">Pepperoni<br>
+          <input type="checkbox" name="cheap-topping" value="Onions">Onions<br>
+          </select>
+          <input type="checkbox" name="cheap-topping" value="Sausage">Sausage<br>
+          <input type="checkbox" name="cheap-topping" value="Tomatoes">Tomatoes<br>
+          <button type="submit" id="cheap-topping-add">Add</button>
+        </form>
+        <form class="toppings" id="tier-two-toppings"
+          <hr>
+          <h2>Select Specialty Toppings</h2>
+          <input type="checkbox" name="expensive-topping" value="Portobella">Portobella Mushrooms<br>
+          <input type="checkbox" name="expensive-topping" value="Olives">Calamata Olives<br>
+          </select>
+          <input type="checkbox" name="expensive-topping" value="Caviar">Caspian Caviar<br>
+          <input type="checkbox" name="expensive-topping" value="Ricotta">Fresh Ricotta<br>
+          <button type="submit" id="expensive-topping-add" name="button" class="btn btn-info">Add</button>
       </form>
      </div> <!--end of container -->
   </body>

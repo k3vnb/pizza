@@ -1,3 +1,7 @@
+var pizzaSize;
+var cheapToppings = [];
+var expensiveToppings = [];
+
 function Pizza(size, cheapToppings, expensiveToppings) {
   this.size = size;
   this.cheapToppings = cheapToppings;
@@ -5,21 +9,49 @@ function Pizza(size, cheapToppings, expensiveToppings) {
 };
 
 Pizza.prototype.pizzaPrice = function() {
-  console.log("pizzaPrice");
-  var pizzaPrice = 10
+  var pizzaSizePrice = 10
   if (this.size == "small") {
-    pizzaPrice = pizzaPrice - 1;
+    pizzaSizePrice = pizzaPrice - 1;
   } else if (this.size == "large") {
-    pizzaPrice = pizzaPrice + 2;
-  } return pizzaPrice;
+    pizzaSizePrice = pizzaPrice + 2;
+  }
+  if (cheapToppings.length >= 1) {
+    
+  }
+
 }
 
+
+
+//end of Business Logic
 $(document).ready(function() {
   $("#size-add").click(function (event){
     event.preventDefault();
-    var pizzaSize = $("select#size-select").val();
+    pizzaSize = $("select#size-select").val();
+    $(".toppings").show();
+    $("#tier-one-toppings").submit(function (event){
+      event.preventDefault();
+      $("input:checkbox[name=cheap-topping]:checked").each(function() {
+      var allCheapToppings = $(this).val();
+      cheapToppings.push(allCheapToppings);
+    });//end of 'add'' cheap toppings select
+        console.log(cheapToppings);
+        console.log('ct ' + cheapToppings);
+    $("#tier-two-toppings").submit(function (event){
+      event.preventDefault();
+      var expensiveToppings = [];
+      $("input:checkbox[name=expensive-topping]:checked").each(function() {
+      var allExpensiveToppings = $(this).val();
+      expensiveToppings.push(allExpensiveToppings);
+  });//end of 'add' exp toppings select
+      console.log(expensiveToppings);
+      console.log('et' + expensiveToppings);
+});
+});
+
+    var yourPizza = new Pizza(pizzaSize, cheapToppings, expensiveToppings);
     console.log(pizzaSize);
-    var yourPizza = new Pizza(pizzaSize);
     console.log(yourPizza.pizzaPrice());
-  })//end of Size Select
+
+  }); //end of size select
 });//end of doc ready
