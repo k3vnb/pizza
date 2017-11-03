@@ -12,13 +12,12 @@ Pizza.prototype.pizzaPrice = function() {
   } else if (this.size == "large") {
     pizzaPrice = pizzaPrice + 2;
   }
-  // if (cheapToppings.length >= 1) {
-  //   pizzaPrice = pizzaPrice + (cheapToppings.length * 1.5)
-  // }
-  // if (expensiveToppings.length >= 1) {
-  //   pizzaPrice = pizzaPrice + (expensiveToppings.length * 2.5)
-  // }
-  return pizzaPrice
+  if (this.cheapToppings.length >= 1) {
+    pizzaPrice = pizzaPrice + (this.cheapToppings.length * 1.5)
+  }
+  if (this.expensiveToppings.length >= 1) {
+    pizzaPrice = pizzaPrice + (this.expensiveToppings.length * 2.5)
+  } return pizzaPrice;
 
 }
 
@@ -37,7 +36,6 @@ $(document).ready(function() {
     cheapToppings.push(allCheapToppings);
   });//end of 'add'' cheap toppings select
         console.log(cheapToppings);
-        console.log('ct ' + cheapToppings);
 
       var expensiveToppings = [];
       $("input:checkbox[name=expensive-topping]:checked").each(function() {
@@ -45,7 +43,6 @@ $(document).ready(function() {
       expensiveToppings.push(allExpensiveToppings);
   });//end of 'add' exp toppings select
       console.log(expensiveToppings);
-      console.log('et' + expensiveToppings);
 
 var yourPizza = new Pizza(pizzaSize, cheapToppings, expensiveToppings);
 console.log(yourPizza.pizzaPrice());
