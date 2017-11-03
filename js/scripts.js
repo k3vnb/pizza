@@ -9,15 +9,19 @@ function Pizza(size, cheapToppings, expensiveToppings) {
 };
 
 Pizza.prototype.pizzaPrice = function() {
-  var pizzaSizePrice = 10
+  var pizzaPrice = 10
   if (this.size == "small") {
-    pizzaSizePrice = pizzaPrice - 1;
+    pizzaPrice = pizzaPrice - 1;
   } else if (this.size == "large") {
-    pizzaSizePrice = pizzaPrice + 2;
+    pizzaPrice = pizzaPrice + 2;
   }
   if (cheapToppings.length >= 1) {
-    
+    pizzaPrice = pizzaPrice + (cheapToppings.length * 1.5)
   }
+  if (expensiveToppings.length >= 1) {
+    pizzaPrice = pizzaPrice + (expensiveToppings.length * 2.5)
+  }
+  return pizzaPrice
 
 }
 
@@ -49,9 +53,9 @@ $(document).ready(function() {
 });
 });
 
-    var yourPizza = new Pizza(pizzaSize, cheapToppings, expensiveToppings);
-    console.log(pizzaSize);
-    console.log(yourPizza.pizzaPrice());
+
 
   }); //end of size select
+  var yourPizza = new Pizza(pizzaSize, cheapToppings, expensiveToppings);
+  console.log(yourPizza.pizzaPrice());
 });//end of doc ready
