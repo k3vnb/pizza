@@ -6,7 +6,7 @@
 
 ## Description
 
-__
+_ _
 
 ## Setup/Installation Requirements
 
@@ -16,18 +16,18 @@ __
 
 ## Specifications
 
-* _It can allow user to select pizza size_
+* _It can allow user to select a single pizza size_
   * _Example Input: large_
   * _Example Output: display("large pizza")_
-* _It can split a string into an array_
-  * _Example Input: 123_
-  * _Example Output: [1,2,3]_
-* _It can detect if input is multiple of 3 & provide custom feedback_
-  * _Example Input: 12_
-  * _Example Output: "I'm sorry Dave..."_
-* _It can analyze array for 1s && 0s & provide custom feedback_
-  * _Example Input: 1001_
-  * _Example Output: beep_
+* _It can allower user to select multiple "cheap" toppings_
+  * _Example Input: select: Pepperoni; select: Sausage_
+  * _Example Output: display("Pepperoni" + "Sausage"_
+* _It can _
+  * _Example Input: _
+  * _Example Output: _
+* _It can _
+  * _Example Input: _
+  * _Example Output: _
 * _It can take other numeric submissions & output a range from 0 until the that number_
   * _Example Input: 1001_
   * _Example Output: beep_
