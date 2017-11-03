@@ -26,9 +26,10 @@ Pizza.prototype.pizzaPrice = function() {
 //end of Business Logic
 $(document).ready(function() {
   $("#size-add").click(function (event) {
-    $(".toppings").show();
-    $(".size-query").hide();
     var pizzaSize = $("select#size-select").val();
+    $("#show-size").empty();
+    $(".toppings").show();
+    $(".your-size").show();
     $("#show-size").append(pizzaSize);
   });
   $("form#pizzaform").submit(function (event){
