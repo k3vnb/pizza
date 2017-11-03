@@ -33,6 +33,8 @@ $(document).ready(function() {
   });
   $("form#pizzaform").submit(function (event){
     event.preventDefault();
+    $("#your-order").empty();
+    $(".display-result").show();
   var pizzaSize = $("select#size-select").val();
 
   var cheapToppings = [];
@@ -50,6 +52,7 @@ $(document).ready(function() {
       console.log(expensiveToppings);
 
 var yourPizza = new Pizza(pizzaSize, cheapToppings, expensiveToppings);
+$("#your-order").append("$" + yourPizza.pizzaPrice());
 console.log(yourPizza.pizzaPrice());
 
   }); //end of submit
