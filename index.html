@@ -14,26 +14,27 @@
         <h1>Pizzarggh</h1>
       </div>
       <form id="pizzaform">
-        <label class="size-query">Select Size</label>
-        <select id="size-select" name="size-pizza">
-          <option value="small">Small</option>
-          <option value="medium">Medium</option>
-          <option value="large">Large</option>
-        </select>
-        <br>
-        <button type="submit" id="size-add" name="button" class="btn btn-primary">Select</button>
-      </form>
+        <div>
+          <label class="size-query">Select Size</label>
+          <select id="size-select" name="size-pizza">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <br>
+          <!-- <button type="submit" id="size-add" name="button" class="btn btn-primary">Select</button> -->
+        </div>
         <hr>
-      <form class="toppings" id="tier-one-toppings">
+      <div class="toppings" id="tier-one-toppings">
           <h2>Select Basic Toppings</h2>
           <input type="checkbox" name="cheap-topping" value="Pepperoni">Pepperoni<br>
           <input type="checkbox" name="cheap-topping" value="Onions">Onions<br>
           </select>
           <input type="checkbox" name="cheap-topping" value="Sausage">Sausage<br>
           <input type="checkbox" name="cheap-topping" value="Tomatoes">Tomatoes<br>
-          <button type="submit" id="cheap-topping-add">Add</button>
-        </form>
-        <form class="toppings" id="tier-two-toppings"
+          <!-- <button type="submit" id="cheap-topping-add">Add</button> -->
+        </div>
+        <div class="toppings" id="tier-two-toppings"
           <hr>
           <h2>Select Specialty Toppings</h2>
           <input type="checkbox" name="expensive-topping" value="Portobella">Portobella Mushrooms<br>
@@ -41,8 +42,11 @@
           </select>
           <input type="checkbox" name="expensive-topping" value="Caviar">Caspian Caviar<br>
           <input type="checkbox" name="expensive-topping" value="Ricotta">Fresh Ricotta<br>
-          <button type="submit" id="expensive-topping-add" name="button" class="btn btn-info">Add</button>
-      </form>
+          <!-- <button type="submit" id="expensive-topping-add" name="button" class="btn btn-info">Add</button> -->
+      </div>
+      <button type="submit" id="submit-form" name="button" class="btn btn-success">Submit</button>
+
+    </form>
      </div> <!--end of container -->
   </body>
 </html>
